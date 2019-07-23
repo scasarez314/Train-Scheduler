@@ -1,36 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>Train Scheduler!</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- CSS Link -->
         <link rel="stylesheet" href="Assets/Style.css">
+        <!-- JQuery Link -->
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Bootstrap Link -->
         <link rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <title>Train Scheduler!</title>
+        <!-- Firebase Links -->
+        <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     </head>
 
     <body>
 
-        <div class="jumbotron">
+        <div class="jumbotron m-3" style="background: rgb(100, 95, 95)">
             <h1 class="text-center">Train Time!</h1>
             <h5 class="text-center">Train Scheduler</h5>
         </div>
 
         <!-- div of the current train schedule -->
-
-        <div class="col-lg-4">
+        <div class="col-lg-8 m-5">
 
             <div class="card">
 
 
-                <div class="card-header">
-                    <h2>Search the Next Train.</h2>
+                <div class="card-header" style="background: rgb(180, 179, 179)">
+                    <h2>Current Train Schedule --</h2>
                 </div>
 
-                <!-- div to add a train -->
+                <div class="card-body">
+
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Train Name:</th>
+                                <th scope="col">Destination:</th>
+                                <th scope="col">Next Arrival:</th>
+                                <th scope="col">Frequency:</th>
+                                <th scope="col">Minutes Away:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- div to add a train -->
+        <div class="col-lg-8 m-5">
+
+            <div class="card">
+
+
+                <div class="card-header" style="background: rgb(180, 179, 179)">
+                    <h2>Add A Train --</h2>
+                </div>
+
+
                 <div class="card-body">
 
                     <form role="form">
@@ -48,22 +105,22 @@
                             <label for="ftt-input">First Train Time(HH:mm -
                                 military time):</label>
                             <input class="form-control" id="ftt-input"
-                                type="number">
+                                type="text">
                         </div>
                         <div class="form-group">
                             <label for="frequency-input">Frequency (min):</label>
                             <input class="form-control" id="frequency-input"
-                                type="number">
+                                type="text">
                         </div>
 
-                        <button class="btn btn-primary" id="add-user"
+                        <button class="btn btn-primary" id="add-Train"
                             type="submit">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
 
-
+        <!-- JavaScript Link -->
         <script src="Assets/JavaScript/App.js"></script>
 
     </body>
