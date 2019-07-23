@@ -1,6 +1,6 @@
 //Firebase key?
 var firebaseConfig = {
-    apiKey: "AIzaSyA65TxtdGwpxlN9Swc3ExOuwZeHOPIKgnw",
+    apiKey: ,
     authDomain: "trian-scheduler.firebaseapp.com",
     databaseURL: "https://trian-scheduler.firebaseio.com",
     projectId: "trian-scheduler",
@@ -44,6 +44,11 @@ $("#add-Train").on("click", function (event) {
 
     //Change what is saved in firebase
     database.ref().set({
+        train: trainName,
+        destination: trainDestination,
+        firsttraintime: trainFTT,
+        frequency: trainFrequency
+
 
     });
 });
